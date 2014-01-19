@@ -15,7 +15,7 @@ ENV_DIR=$3
 
 LOGGER_FLAGS=""
 
-curl --silent --location https://github.com/heroku/heroku-buildpack-jvm-common/tarball/envdir | tar xz
+curl --silent --location https://github.com/heroku/heroku-buildpack-jvm-common/tarball/envdir | tar xz --strip-components=1
 . bin/util
 . bin/java
 
