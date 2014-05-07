@@ -78,51 +78,80 @@
     <mirror>
       <id>centralMirror</id>
       <mirrorOf>central</mirrorOf>
-      <name>central</name>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
+      <name>centralMirror</name>
+      <url>http://s3pository.heroku.com/jvm/</url>
     </mirror>
     <mirror>
-      <id>spring-maven-release</id>
-      <mirrorOf>spring-maven-release</mirrorOf>
+      <id>spring-releaseMirror</id>
+      <mirrorOf>spring-release</mirrorOf>
       <name>Spring Maven Release Repository</name>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
+      <url>http://s3pository.heroku.com/jvm/</url>
     </mirror>
     <mirror>
-      <id>spring-maven-milestone</id>
-      <mirrorOf>spring-maven-milestone</mirrorOf>
+      <id>spring-milestoneMirror</id>
+      <mirrorOf>spring-milestone</mirrorOf>
       <name>Spring Maven Milestone Repository</name>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
+      <url>http://s3pository.heroku.com/jvm/</url>
     </mirror>
     <mirror>
       <id>spring-roo-mirror</id>
-      <mirrorOf>spring-roo-mirror</mirrorOf>
+      <mirrorOf>spring-roo</mirrorOf>
       <name>Spring Roo Repository</name>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
+      <url>http://s3pository.heroku.com/jvm/</url>
     </mirror>
     <mirror>
       <mirrorOf>JBoss Repo</mirrorOf>
-      <id>JBoss Repo</id>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
+      <id>JBoss Repo Mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
       <name>JBoss Repo</name>
     </mirror>
     <mirror>
+      <mirrorOf>JBoss Third Party Repo</mirrorOf>
+      <id>JBoss Third Party Repo Mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>JBoss Third Party Repo</name>
+    </mirror>
+    <mirror>
+      <mirrorOf>terracotta-repository</mirrorOf>
+      <id>terracotta-repository-mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>Terracotta Repository Mirror</name>
+    </mirror>
+    <mirror>
       <mirrorOf>com.force.maven.snapshot</mirrorOf>
-      <id>com.force.maven.snapshot</id>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
-      <name>com.force.maven.snapshot</name>
+      <id>com.force.maven.snapshot mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>com.force.maven.snapshot mirror</name>
     </mirror>
     <mirror>
       <mirrorOf>com.force.maven.release</mirrorOf>
-      <id>com.force.maven.release</id>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
-      <name>com.force.maven.release</name>
+      <id>com.force.maven.release mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>com.force.maven.release mirror</name>
     </mirror>
     <mirror>
       <mirrorOf>DataNucleus_2</mirrorOf>
-      <id>DataNucleus_2</id>
-      <url>http://maven-s3pository.herokuapp.com/all/</url>
-      <name>DataNucleus_2</name>
+      <id>DataNucleus_2 mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>DataNucleus_2 mirror</name>
+    </mirror>
+    <mirror>
+      <mirrorOf>Glassfish</mirrorOf>
+      <id>Glassfish mirror</id>
+      <url>http://s3pository.heroku.com/jvm/</url>
+      <name>Glassfish mirror</name>
     </mirror>
   </mirrors>
 
+  <profiles>
+    <profile>
+      <id>defaultProfile</id>
+      <activation>
+          <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      </properties>
+    </profile>
+  </profiles>
 </settings>
