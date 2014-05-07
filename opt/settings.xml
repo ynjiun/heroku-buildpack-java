@@ -27,6 +27,14 @@
   <offline>false</offline>
   -->
 
+  <servers>
+    <server>
+      <id>${env.MAVEN_PRIVATE_REPO_ID}</id>
+      <username>${env.MAVEN_PRIVATE_REPO_USERNAME}</username>
+      <password>${env.MAVEN_PRIVATE_REPO_PASSWORD}</password>
+    </server>
+  </servers> 
+
   <!-- proxies
   | This is a list of proxies which can be used on this machine to connect to the network.
   | Unless otherwise specified (by system property or command-line switch), the first proxy
