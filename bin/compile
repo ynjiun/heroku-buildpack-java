@@ -81,6 +81,12 @@ more .m2/settings.xml
 
 export MAVEN_OPTS="-Xmx1024m"
 
+# config app
+CONFIGCMD="$CACHE_DIR/.maven/bin/mvn --projects configuration,core"
+echo "------> configuring $CONFIGCMD"
+
+$CONFIGCMD
+
 # build app
 BUILDCMD="$CACHE_DIR/.maven/bin/mvn -B -Duser.home=$BUILD_DIR -Dmaven.repo.local=$CACHE_DIR/.m2/repository -DskipTests=true clean install"
 echo "-----> executing $BUILDCMD"
